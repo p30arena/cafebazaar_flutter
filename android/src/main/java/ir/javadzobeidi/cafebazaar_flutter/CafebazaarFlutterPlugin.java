@@ -245,8 +245,9 @@ public class CafebazaarFlutterPlugin implements MethodChannel.MethodCallHandler 
             Purchase gasPurchase = mHelper.queryInventory(false, additionalSkuList).getPurchase(sku);
             if (gasPurchase != null) {
                 pendingResult.success(gasPurchase.getOriginalJson());
-            } else
+            } else {
                 pendingResult.success(null);
+            }
         } catch (IabException e) {
             e.printStackTrace();
             pendingResult.error("get_purchase_error", e.getMessage(), null);
