@@ -37,9 +37,6 @@ public class Inventory {
 
     /** Returns purchase information for a given product, or null if there is no purchase. */
     public Purchase getPurchase(String sku) {
-        for (Map.Entry<String, Purchase> entry : mPurchaseMap.entrySet()) {
-            android.util.Log.i("xxx", entry.getKey() + ":" + entry.getValue().toString());
-        }
         return mPurchaseMap.get(sku);
     }
 
