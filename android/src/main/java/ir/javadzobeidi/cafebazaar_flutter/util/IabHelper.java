@@ -861,8 +861,6 @@ public class IabHelper {
                         RESPONSE_INAPP_PURCHASE_DATA_LIST);
             ArrayList<String> signatureList = ownedItems.getStringArrayList(
                         RESPONSE_INAPP_SIGNATURE_LIST);
-            
-            android.util.Log.i("xxx", String.valueOf(purchaseDataList.size()));
 
             for (int i = 0; i < purchaseDataList.size(); ++i) {
                 String purchaseData = purchaseDataList.get(i);
